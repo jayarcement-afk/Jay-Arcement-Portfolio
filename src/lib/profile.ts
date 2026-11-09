@@ -18,7 +18,7 @@ export const profile = {
     },
     {
       title: "Go-to-market",
-      body: "Built the offer from customer insight. Set positioning, pricing, and packaging. Aligned product, sales, and marketing. Measured adoption in revenue.",
+      body: "Developed Customer & Market Insights. Set positioning, pricing, and packaging. Aligned product, sales, and marketing. Measured adoption in revenue.",
     },
     {
       title: "Transformation",
