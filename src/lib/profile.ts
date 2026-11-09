@@ -26,7 +26,7 @@ export const profile = {
     },
     {
       title: "Portfolio",
-      body: "Built the innovation portfolio. Horizon 1–3, one score for every bet. 100+ ideas, 25 governed, 11 commercialized. $3M new revenue, 9,000 hours saved.",
+      body: "Built a $6M+ innovation portfolio. Investment prioritization and rubric. Horizon 1–3. 100+ ideas, 25 governed, 11 commercialized. $3M new revenue, 9,000 hours saved.",
     },
   ],
 };
