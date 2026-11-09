@@ -47,19 +47,9 @@ export default function Home() {
                   </p>
                 ))}
               </div>
-              <div className="mt-8 grid gap-6 border-t border-border pt-8 lg:grid-cols-[minmax(0,14rem)_minmax(0,1fr)] lg:gap-10">
-                <div>
-                  <p className="font-mono text-[0.62rem] tracking-[0.14em] text-stamp uppercase">Now</p>
-                  <p className="mt-2 font-serif text-xl tracking-tight">UL Solutions, Atlanta</p>
-                  <a
-                    href={`mailto:${profile.email}`}
-                    className="mt-3 inline-block font-sans text-sm text-foreground underline decoration-border underline-offset-4 hover:decoration-stamp"
-                  >
-                    {profile.email}
-                  </a>
-                </div>
-                <p className="max-w-2xl font-sans text-base leading-7">{profile.summary}</p>
-              </div>
+              <p className="mt-8 max-w-2xl border-t border-border pt-8 font-sans text-base leading-7">
+                {profile.summary}
+              </p>
             </div>
           </div>
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

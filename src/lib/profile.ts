@@ -2,7 +2,6 @@ export const profile = {
   name: "Jay Arcement",
   place: "Atlanta",
   role: "Director of AI Product & GTM Strategy",
-  email: "jayarcement@gmail.com",
   lines: [
     "Customer signals become products.",
     "Products become businesses.",

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ContactLink } from "@/components/contact-link";
 import type { ShelfEntry } from "@/lib/shelf";
 import { cn } from "@/lib/utils";
 
@@ -11,7 +12,7 @@ const nav = [
 function activeSection(current?: string) {
   if (!current) return "about";
   if (current.startsWith("/press")) return "releases";
-  if (current.startsWith("/patents")) return "patents";
+  if (current.startsWith("/patents") || current.startsWith("/projects")) return "patents";
   return null;
 }
 
@@ -61,6 +62,7 @@ export function Shell({
                 </Link>
               );
             })}
+            <ContactLink />
           </nav>
         </div>
       </header>
