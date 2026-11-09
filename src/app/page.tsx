@@ -47,9 +47,13 @@ export default function Home() {
                   </p>
                 ))}
               </div>
-              <p className="mt-8 max-w-2xl border-t border-border pt-8 font-sans text-base leading-7">
-                {profile.summary}
-              </p>
+              <div className="mt-8 max-w-2xl space-y-4 border-t border-border pt-8">
+                {profile.summary.map((paragraph) => (
+                  <p key={paragraph.slice(0, 32)} className="font-sans text-base leading-7">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

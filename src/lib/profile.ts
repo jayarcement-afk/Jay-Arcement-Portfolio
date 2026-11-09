@@ -7,8 +7,10 @@ export const profile = {
     "From Concept to Commercialization",
     "15+ Years Leading Technology Transformation",
   ],
-  summary:
-    "For fifteen years I have taken AI, computer vision, and data from a customer problem to a product a company can sell. At UL Solutions I direct enterprise AI product strategy, a budget above $6 million, and a portfolio of 11 products. At NCR I led retail product innovation and launched Halo Checkout, which cut time at the lane by 46%. The release and the patents below come from that work.",
+  summary: [
+    "I help organizations turn emerging technologies into commercial products and measurable business outcomes.",
+    "Over the past 15+ years, I've led product, AI, and strategy initiatives for Fortune 500 companies, focusing on bringing innovative solutions from concept to commercialization. My experience spans AI product development, product strategy, portfolio management, and cross-functional leadership.",
+  ],
   focus: [
     {
       title: "AI product",
