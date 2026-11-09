@@ -18,7 +18,7 @@ export const profile = {
     },
     {
       title: "Go-to-market",
-      body: "Roadmaps, co-build partnerships, and the launch plan that follows a working system. The work is aligning what gets built with how it is sold.",
+      body: "From customer insight to the offer. Positioning, pricing, and packaging. Aligned product, sales, and marketing. Adoption measured in revenue.",
     },
     {
       title: "Transformation",
