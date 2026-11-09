@@ -42,9 +42,11 @@ export function PressArticle() {
           </div>
         </header>
 
-        <p className="mt-8 max-w-3xl font-sans text-lg leading-8 text-foreground">{press.summary}</p>
+        <p className="mt-10 max-w-3xl font-sans text-lg leading-8 font-semibold text-foreground">
+          {press.summary}
+        </p>
 
-        <div className="mt-8 grid max-w-3xl gap-5">
+        <div className="mt-10 grid max-w-3xl gap-8">
           {press.paragraphs.map((paragraph) => (
             <p key={paragraph.slice(0, 48)} className="font-sans text-base leading-7">
               {paragraph}
