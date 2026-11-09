@@ -6,6 +6,11 @@ export const press = {
   dateline: "Atlanta",
   published: "January 10, 2025, 5:12 p.m. Eastern Time",
   distributor: "Business Wire, carried by Nasdaq",
+  facts: [
+    { label: "Live in a store", value: "November 2024" },
+    { label: "Scanned together", value: "Up to 20 items" },
+    { label: "Open to pre-order", value: "US, Canada, UK, EU" },
+  ],
   summary:
     "NCR Voyix announced that Phillips 66 and convenience retailer Mach 1 had opened an automated, AI bulk-scanning self-checkout. The company said NCR Voyix Halo Checkout, using Everseen’s vision AI, had been live at a Phillips 66-branded Mach 1 station since November 2024, and that the system was available to pre-order in the United States, Canada, the United Kingdom, and the European Union.",
   paragraphs: [

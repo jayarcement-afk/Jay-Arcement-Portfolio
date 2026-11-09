@@ -40,8 +40,6 @@ export function PatentDocument({ doc }: { doc: PatentDoc }) {
             {doc.title}
           </h1>
           <p className="mt-4 font-mono text-sm tracking-wide text-foreground">{doc.identifier}</p>
-          <div className="mt-5 h-px bg-foreground" />
-          <div className="mt-px h-px bg-foreground/30" />
         </header>
 
         <dl className="mt-8 grid gap-x-8 gap-y-4 sm:grid-cols-2">
@@ -57,7 +55,7 @@ export function PatentDocument({ doc }: { doc: PatentDoc }) {
           ))}
         </dl>
 
-        <nav aria-label="On this page" className="sticky top-0 z-10 mt-8 -mx-5 border-y border-border bg-background/95 px-5 py-3 backdrop-blur sm:mx-0 sm:px-0">
+        <nav aria-label="On this page" className="sticky top-16 z-20 mt-8 -mx-5 border-y border-border bg-background/95 px-5 py-3 backdrop-blur sm:mx-0 sm:px-0">
           <ul className="flex gap-x-4 gap-y-2 overflow-x-auto font-sans text-sm whitespace-nowrap">
             {contents.map((item) => (
               <li key={item.id}>
@@ -73,7 +71,7 @@ export function PatentDocument({ doc }: { doc: PatentDoc }) {
         </nav>
 
         {doc.pdf ? (
-          <section id="official-pdf" className="scroll-mt-16 pt-10">
+          <section id="official-pdf" className="scroll-mt-28 pt-10">
             <div className="flex flex-wrap items-end justify-between gap-3">
               <div>
                 <h2 className="font-serif text-2xl tracking-tight">Official PDF</h2>
@@ -106,21 +104,21 @@ export function PatentDocument({ doc }: { doc: PatentDoc }) {
           </section>
         ) : null}
 
-        <section id="abstract" className="scroll-mt-16 pt-12">
+        <section id="abstract" className="scroll-mt-28 pt-12">
           <h2 className="font-serif text-2xl tracking-tight">Abstract</h2>
           <p className="mt-4 border border-border bg-card px-5 py-4 font-serif text-[1.05rem] leading-8">
             {doc.text.abstract}
           </p>
         </section>
 
-        <section id="claims" className="scroll-mt-16 pt-12">
+        <section id="claims" className="scroll-mt-28 pt-12">
           <h2 className="font-serif text-2xl tracking-tight">Claims</h2>
           <p className="mt-2 font-sans text-sm text-muted-foreground">
             {doc.text.claims.length} claims.
           </p>
           <ol className="mt-6 space-y-6">
             {doc.text.claims.map((claim) => (
-              <li key={claim.number} id={`claim-${claim.number}`} className="grid grid-cols-[2.25rem_minmax(0,1fr)] gap-3 scroll-mt-16">
+              <li key={claim.number} id={`claim-${claim.number}`} className="grid grid-cols-[2.25rem_minmax(0,1fr)] gap-3 scroll-mt-28">
                 <span className="pt-1 font-mono text-sm text-muted-foreground">{claim.number}.</span>
                 <div className="font-serif text-[1.05rem] leading-8">
                   <p>{claim.preamble}</p>
@@ -138,7 +136,7 @@ export function PatentDocument({ doc }: { doc: PatentDoc }) {
         </section>
 
         {doc.text.sections.map((section) => (
-          <section key={section.id} id={section.id} className="scroll-mt-16 pt-12">
+          <section key={section.id} id={section.id} className="scroll-mt-28 pt-12">
             <h2 className="font-serif text-2xl tracking-tight">{section.heading}</h2>
             <div className="mt-4 space-y-5">
               {section.paragraphs.map((paragraph, index) => (
@@ -151,7 +149,7 @@ export function PatentDocument({ doc }: { doc: PatentDoc }) {
         ))}
 
         {doc.events ? (
-          <section id="file-events" className="scroll-mt-16 pt-12">
+          <section id="file-events" className="scroll-mt-28 pt-12">
             <h2 className="font-serif text-2xl tracking-tight">File events</h2>
             <p className="mt-2 font-sans text-sm leading-6 text-muted-foreground">
               Events reported on the public patent record for application 18/217,459.

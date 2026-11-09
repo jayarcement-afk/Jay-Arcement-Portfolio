@@ -27,4 +27,4 @@ npm start
 
 ## Add a page
 
-Add a route under `src/app`, then add an entry to `src/lib/shelf.ts` so it appears in the shelf navigation.
+Add a route under `src/app`, then add an entry to `src/lib/shelf.ts` so it appears in the navigation.

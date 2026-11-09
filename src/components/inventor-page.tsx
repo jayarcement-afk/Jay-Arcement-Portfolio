@@ -21,9 +21,7 @@ export function InventorPage() {
           <h1 className="mt-3 font-serif text-4xl leading-[1.12] tracking-tight sm:text-5xl">
             Patents by inventor {inventor.name}
           </h1>
-          <p className="mt-5 max-w-2xl font-serif text-xl leading-9">{inventor.intro}</p>
-          <div className="mt-5 h-px bg-foreground" />
-          <div className="mt-px h-px bg-foreground/30" />
+          <p className="mt-5 max-w-2xl font-sans text-lg leading-8">{inventor.intro}</p>
         </header>
 
         <ol className="mt-10 space-y-10">
@@ -79,7 +77,7 @@ export function InventorPage() {
               <p className="mt-4 font-serif text-[1.05rem] leading-8">{record.abstract}</p>
               <p className="mt-4 flex flex-wrap gap-x-4 gap-y-2 font-sans text-sm">
                 <Link href={record.href} className="underline underline-offset-4 hover:decoration-stamp">
-                  Open on this shelf
+                  Open the full record
                 </Link>
                 <a
                   href={record.external.href}
@@ -99,7 +97,7 @@ export function InventorPage() {
 
         <SourceLinks
           links={[inventor.source]}
-          note="Titles, numbers, dates, inventors, and abstracts follow the public inventor listing. Grants and the 2024 application also open as full pages on this shelf."
+          note="Titles, numbers, dates, inventors, and abstracts follow the public inventor listing. Grants and the 2024 application also open as full pages in Folio."
         />
       </article>
     </Shell>
