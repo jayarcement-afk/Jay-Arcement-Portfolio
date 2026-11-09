@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Shell } from "@/components/shell";
 import { hazard } from "@/lib/hazard";
 
@@ -20,6 +21,27 @@ export default function HazardClassificationPage() {
         <p className="mt-4 max-w-2xl font-sans text-lg leading-8 text-muted-foreground">
           UL’s first agentic customer solution.
         </p>
+        <aside className="mt-8 grid items-center gap-6 rounded-3xl border border-border bg-card p-4 sm:p-6 lg:grid-cols-[18rem_minmax(0,1fr)] lg:gap-8">
+          <Image
+            src={hazard.award.image}
+            alt="2025 CEO Mark of Excellence Award Winner, UL Solutions."
+            width={800}
+            height={800}
+            className="h-auto w-full rounded-2xl"
+          />
+          <div>
+            <p className="font-mono text-[0.68rem] tracking-[0.16em] text-stamp uppercase">
+              {hazard.award.label}
+            </p>
+            <div className="mt-4 grid gap-4">
+              {hazard.award.paragraphs.map((paragraph) => (
+                <p key={paragraph.slice(0, 32)} className="font-sans text-base leading-7">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+        </aside>
         <div className="mt-8 grid max-w-3xl gap-5">
           {hazard.paragraphs.map((paragraph) => (
             <p key={paragraph.slice(0, 40)} className="font-sans text-base leading-7">
