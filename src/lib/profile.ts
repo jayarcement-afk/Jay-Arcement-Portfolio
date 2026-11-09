@@ -21,7 +21,7 @@ export const profile = {
       body: "Roadmaps, co-build partnerships, and the launch plan that follows a working system. The work is aligning what gets built with how it is sold.",
     },
     {
-      title: "Retail checkout",
+      title: "Technology transformation",
       body: "Led NCR’s first autonomous checkout. Evaluated and chose frictionless technology stack. Phillips 66 pilot. 46% faster transactions.",
     },
     {
