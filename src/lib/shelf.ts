@@ -52,11 +52,9 @@ export const workSections = [
   {
     id: "releases" as const,
     title: "Product Releases",
-    lede: "Products that have been announced in public.",
   },
   {
     id: "patents" as const,
     title: "Patents and Projects",
-    lede: "Granted patents and the published application. Later projects can sit in this list.",
   },
 ];

@@ -73,11 +73,7 @@ export default function Home() {
         </section>
 
         <section id="releases" className="mt-20 scroll-mt-24">
-          <SectionHeading
-            index="01"
-            title={workSections[0].title}
-            lede={workSections[0].lede}
-          />
+          <SectionHeading index="01" title={workSections[0].title} />
           <ul className="mt-6 grid gap-4">
             {releases.map((entry) => (
               <li key={entry.href}>
@@ -104,11 +100,7 @@ export default function Home() {
         </section>
 
         <section id="patents" className="mt-20 scroll-mt-24">
-          <SectionHeading
-            index="02"
-            title={workSections[1].title}
-            lede={workSections[1].lede}
-          />
+          <SectionHeading index="02" title={workSections[1].title} />
           <ol className="mt-6 divide-y divide-border border-y border-border">
             {patents.map((entry, index) => (
               <li key={entry.href}>
@@ -145,22 +137,13 @@ export default function Home() {
   );
 }
 
-function SectionHeading({
-  index,
-  title,
-  lede,
-}: {
-  index: string;
-  title: string;
-  lede: string;
-}) {
+function SectionHeading({ index, title }: { index: string; title: string }) {
   return (
-    <div className="flex flex-wrap items-end justify-between gap-3">
-      <div>
-        <p className="font-mono text-[0.68rem] tracking-[0.16em] text-stamp uppercase">{index}</p>
-        <h2 className="mt-2 font-serif text-3xl tracking-tight sm:text-4xl">{title}</h2>
-      </div>
-      <p className="max-w-sm font-sans text-sm leading-6 text-muted-foreground">{lede}</p>
+    <div className="flex items-center gap-4">
+      <span className="grid size-11 shrink-0 place-items-center rounded-md bg-primary font-serif text-sm text-primary-foreground">
+        {index}
+      </span>
+      <h2 className="font-serif text-3xl tracking-tight sm:text-4xl">{title}</h2>
     </div>
   );
 }
