@@ -1,4 +1,4 @@
-# Folio
+# Portfolio
 
 Jay Arcement’s site. The home page is an introduction, then two sections of work.
 

@@ -97,7 +97,7 @@ export function InventorPage() {
 
         <SourceLinks
           links={[inventor.source]}
-          note="Titles, numbers, dates, inventors, and abstracts follow the public inventor listing. Grants and the 2024 application also open as full pages in Folio."
+          note="Titles, numbers, dates, inventors, and abstracts follow the public inventor listing. Grants and the 2024 application also open as full pages in this portfolio."
         />
       </article>
     </Shell>

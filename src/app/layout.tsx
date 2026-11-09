@@ -21,8 +21,8 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Folio",
-    template: "%s · Folio",
+    default: "Portfolio",
+    template: "%s · Portfolio",
   },
   description:
     "Jay Arcement. Product releases and the patent work behind checkout, including the Halo announcement and three USPTO records.",

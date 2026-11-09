@@ -9,7 +9,7 @@ export default function NotFound() {
         <p className="font-mono text-[0.68rem] tracking-[0.16em] text-stamp uppercase">
           Missing page
         </p>
-        <h1 className="mt-3 font-serif text-4xl tracking-tight">That page is not in Folio.</h1>
+        <h1 className="mt-3 font-serif text-4xl tracking-tight">That page is not in this portfolio.</h1>
         <p className="mt-4 max-w-xl font-sans text-lg leading-8">
           Home holds the Phillips 66 release, the two grants, and the 2024 application.
         </p>

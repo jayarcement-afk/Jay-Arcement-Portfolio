@@ -34,10 +34,10 @@ export function Shell({
             className="flex shrink-0 items-center gap-2 rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
           >
             <span className="grid size-8 place-items-center rounded-md bg-primary font-serif text-sm text-primary-foreground">
-              F
+              J
             </span>
             <span className="leading-tight">
-              <span className="block font-serif text-base tracking-tight">Folio</span>
+              <span className="block font-serif text-base tracking-tight">Portfolio</span>
               <span className="block font-mono text-[0.62rem] tracking-[0.14em] text-muted-foreground uppercase">
                 Jay Arcement
               </span>
