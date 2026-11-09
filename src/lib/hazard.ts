@@ -18,10 +18,11 @@ export const hazard = {
   ],
   retailers: { label: "Tier-one retailers", value: "3" },
   paragraphs: [
-    "Led UL’s first agentic customer solution for hazard classification. 55 agents evaluated 10 million items at 95% accuracy and 300× efficiency. The work earned a CEO Mark of Excellence and sold $3M to three tier-one retailers.",
-    "Validated demand through customer interviews and research. The serviceable market was $22M, and the business case showed an attractive ROI and payback.",
-    "Assessed whether agentic AI could automate hazard classification. Set performance thresholds and stage-gate milestones with clear go or no-go criteria.",
-    "Won support for a disruptive model by positioning the solution as a complement to existing services, expanding reach rather than replacing them.",
-    "Aligned Legal, Cybersecurity, and business leaders on liability, intellectual property, security, and startup partnerships, and got the program approved and launched.",
+    "Identified a $22M market opportunity and built the business case for UL’s first agentic AI solution, validating demand through customer interviews, market research, and ROI analysis.",
+    "Assessed the viability of applying agentic AI to hazard classification, defining success metrics, stage-gate criteria, and investment milestones to manage risk while accelerating innovation.",
+    "Led the development and commercialization of a first-of-its-kind multi-agent system leveraging 55 agents to evaluate 10 million products at 95% accuracy and 300× greater efficiency than traditional approaches.",
+    "Built executive alignment around a disruptive business model by positioning agentic AI as a force multiplier for existing services, expanding market reach rather than cannibalizing core revenue streams.",
+    "Navigated complex legal, cybersecurity, intellectual property, and partnership considerations, securing approval across key governance stakeholders and enabling enterprise deployment.",
+    "Launched and scaled the solution to three tier-one retailers, generating $3M in revenue, protecting a strategic customer relationship worth $65M annually, and earning the CEO Mark of Excellence.",
   ],
 };
