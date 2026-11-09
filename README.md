@@ -1,14 +1,11 @@
 # Folio
 
-Jay Arcement’s portfolio archive of five public records, saved November 8, 2026, and built so more routes can be added beside them.
+Jay Arcement’s site. The home page is an introduction, then two sections of work.
 
-1. The January 10, 2025 Nasdaq release on Phillips 66, Mach 1, NCR Voyix Halo checkout, and Everseen.
-2. US 12,725,481 B2, *Personalized and themed transaction interface*, including the official USPTO PDF.
-3. US 12,711,285 B2, *Smart cart security with auditing*, including the official USPTO PDF.
-4. The public inventor listing for Jay Arcement.
-5. US 2024/0005750 A1, the published application on event-triggered item image capture.
+1. Product Releases: the January 10, 2025 Nasdaq release on Phillips 66, Mach 1, NCR Voyix Halo checkout, and Everseen.
+2. Patents and Projects: US 12,725,481 B2, US 12,711,285 B2, and US 2024/0005750 A1.
 
-The grant pages store the USPTO PDFs and the full patent text. The inventor page stores all six listings. The 2024 application stores the published specification. The press page stores a clipping of the announcement and links to the Nasdaq and Business Wire wording.
+The about lines live in `src/lib/profile.ts`. The grant pages store the USPTO PDFs and the full patent text. The 2024 application stores the published specification. The press page stores a clipping of the announcement and links to the Nasdaq and Business Wire wording. A fuller inventor listing remains at `/inventors/jay-arcement`.
 
 ## Run locally
 
@@ -27,4 +24,4 @@ npm start
 
 ## Add a page
 
-Add a route under `src/app`, then add an entry to `src/lib/shelf.ts` so it appears in the navigation.
+Add a route under `src/app`, then add an entry to `src/lib/shelf.ts` with `group: "releases"` or `group: "patents"` so it appears in that section on the home page.

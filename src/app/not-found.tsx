@@ -11,7 +11,7 @@ export default function NotFound() {
         </p>
         <h1 className="mt-3 font-serif text-4xl tracking-tight">That page is not in Folio.</h1>
         <p className="mt-4 max-w-xl font-sans text-lg leading-8">
-          The five records are the press release, the two grants, the inventor listing, and the 2024 application.
+          Home holds the Phillips 66 release, the two grants, and the 2024 application.
         </p>
         <Button className="mt-8" nativeButton={false} render={<Link href="/" />}>
           Back home

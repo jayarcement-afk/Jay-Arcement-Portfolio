@@ -1,15 +1,29 @@
 import Link from "next/link";
-import { savedOn } from "@/lib/archive";
-import { shelf, type ShelfEntry } from "@/lib/shelf";
+import type { ShelfEntry } from "@/lib/shelf";
 import { cn } from "@/lib/utils";
+
+const nav = [
+  { href: "/#about", label: "About", id: "about" },
+  { href: "/#releases", label: "Releases", id: "releases" },
+  { href: "/#patents", label: "Patents", id: "patents" },
+] as const;
+
+function activeSection(current?: string) {
+  if (!current) return "about";
+  if (current.startsWith("/press")) return "releases";
+  if (current.startsWith("/patents")) return "patents";
+  return null;
+}
 
 export function Shell({
   current,
   children,
 }: {
-  current?: ShelfEntry["href"];
+  current?: ShelfEntry["href"] | "/inventors/jay-arcement";
   children: React.ReactNode;
 }) {
+  const active = activeSection(current);
+
   return (
     <div className="min-h-full">
       <header className="sticky top-0 z-30 border-b border-border bg-background/90 backdrop-blur">
@@ -28,32 +42,26 @@ export function Shell({
               </span>
             </span>
           </Link>
-          <nav
-            aria-label="Documents"
-            className="flex min-w-0 flex-1 gap-1 overflow-x-auto"
-          >
-            {shelf.map((item) => {
-              const active = item.href === current;
+          <nav aria-label="Sections" className="flex min-w-0 flex-1 gap-1 overflow-x-auto">
+            {nav.map((item) => {
+              const on = item.id === active;
               return (
                 <Link
-                  key={item.href}
+                  key={item.id}
                   href={item.href}
-                  aria-current={active ? "page" : undefined}
+                  aria-current={on ? "page" : undefined}
                   className={cn(
                     "shrink-0 rounded-full px-3 py-1.5 font-sans text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
-                    active
+                    on
                       ? "bg-primary text-primary-foreground"
                       : "text-muted-foreground hover:bg-secondary hover:text-foreground",
                   )}
                 >
-                  {item.nav}
+                  {item.label}
                 </Link>
               );
             })}
           </nav>
-          <p className="hidden shrink-0 font-mono text-[0.62rem] tracking-[0.12em] text-muted-foreground uppercase lg:block">
-            Saved {savedOn}
-          </p>
         </div>
       </header>
       <div className="min-w-0">{children}</div>
