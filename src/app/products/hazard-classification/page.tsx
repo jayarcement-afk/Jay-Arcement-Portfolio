@@ -42,12 +42,30 @@ export default function HazardClassificationPage() {
             </div>
           </div>
         </aside>
-        <div className="mt-8 grid max-w-3xl gap-5">
-          {hazard.paragraphs.map((paragraph) => (
-            <p key={paragraph.slice(0, 40)} className="font-sans text-base leading-7">
-              {paragraph}
-            </p>
-          ))}
+        <div className="mt-10 grid items-start gap-8 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-12">
+          <ul className="grid grid-cols-2 gap-3 lg:grid-cols-1">
+            {hazard.metrics.map((metric) => (
+              <li key={metric.label} className="rounded-2xl border border-border bg-card px-4 py-3">
+                <p className="font-mono text-[0.62rem] tracking-[0.14em] text-stamp uppercase">
+                  {metric.label}
+                </p>
+                <p className="mt-1 font-serif text-2xl tracking-tight">{metric.value}</p>
+              </li>
+            ))}
+            <li className="rounded-2xl bg-accent px-4 py-3 text-accent-foreground">
+              <p className="font-mono text-[0.62rem] tracking-[0.14em] uppercase">
+                {hazard.retailers.label}
+              </p>
+              <p className="mt-1 font-serif text-2xl tracking-tight">{hazard.retailers.value}</p>
+            </li>
+          </ul>
+          <div className="grid max-w-3xl gap-8">
+            {hazard.paragraphs.map((paragraph) => (
+              <p key={paragraph.slice(0, 40)} className="font-sans text-base leading-7">
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </div>
       </article>
     </Shell>

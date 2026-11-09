@@ -11,6 +11,12 @@ export const hazard = {
       "Received 2025 CEO Mark of Excellence Award by UL Solutions. This achievement reflects the dedication, innovation, and collaboration of an exceptional group of colleagues. Proud to be part of a team making a meaningful impact in creating a safer world.",
     ],
   },
+  metrics: [
+    { label: "Accuracy", value: "95%" },
+    { label: "Times processed", value: "10 million" },
+    { label: "Efficiency", value: "300×" },
+  ],
+  retailers: { label: "Tier-one retailers", value: "3" },
   paragraphs: [
     "Led UL’s first agentic customer solution for hazard classification. 55 agents evaluated 10 million items at 95% accuracy and 300× efficiency. The work earned a CEO Mark of Excellence and sold $3M to three tier-one retailers.",
     "Validated demand through customer interviews and research. The serviceable market was $22M, and the business case showed an attractive ROI and payback.",
