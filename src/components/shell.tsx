@@ -11,7 +11,7 @@ const nav = [
 
 function activeSection(current?: string) {
   if (!current) return "about";
-  if (current.startsWith("/press")) return "releases";
+  if (current.startsWith("/press") || current.startsWith("/products")) return "releases";
   if (current.startsWith("/patents") || current.startsWith("/projects")) return "patents";
   return null;
 }

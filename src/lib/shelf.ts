@@ -1,8 +1,10 @@
+import { hazard } from "@/lib/hazard";
 import { trayTables } from "@/lib/projects";
 
 export type ShelfEntry = {
   href:
     | "/press/phillips-66-mach-1-halo"
+    | "/products/hazard-classification"
     | "/patents/us-12725481"
     | "/patents/us-12711285"
     | "/patents/us-20240005750"
@@ -23,6 +25,14 @@ export const shelf: ShelfEntry[] = [
       "Phillips 66 and Mach 1 revolutionize their checkout experience with NCR Voyix Halo and Everseen",
     dek: "NCR Voyix said Halo, using Everseen vision AI, had been checking out baskets at a Phillips 66-branded Mach 1 station since November 2024. The announcement is dated January 10, 2025.",
     meta: "January 10, 2025 · Nasdaq",
+  },
+  {
+    href: hazard.href,
+    group: "releases",
+    kicker: hazard.kicker,
+    title: hazard.title,
+    dek: hazard.dek,
+    meta: hazard.meta,
   },
   {
     href: trayTables.href,
