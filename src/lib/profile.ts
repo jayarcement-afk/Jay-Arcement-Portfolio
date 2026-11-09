@@ -1,19 +1,31 @@
 export const profile = {
   name: "Jay Arcement",
   place: "Atlanta",
-  line: "Checkout products, and the public record of the work behind them.",
-  notes: [
+  role: "Director of AI Product & GTM Strategy",
+  email: "jayarcement@gmail.com",
+  lines: [
+    "Customer signals become products.",
+    "Products become businesses.",
+    "Businesses need a way to reach the market.",
+  ],
+  summary:
+    "For fifteen years I have taken AI, computer vision, and data from a customer problem to a product a company can sell. At UL Solutions I direct enterprise AI product strategy, a budget above $6 million, and a portfolio of 11 products. At NCR I led retail product innovation and launched Halo Checkout, which cut time at the lane by 46%. The release and the patents below come from that work.",
+  focus: [
     {
-      label: "Place",
-      body: "Atlanta. That is how the USPTO grants list the inventor address.",
+      title: "AI product",
+      body: "Agentic systems and computer vision, from the first customer signal through a pilot and into something a buyer adopts. At UL Solutions that includes a first agentic product taken up by Walmart, Target, and Best Buy.",
     },
     {
-      label: "Work",
-      body: "Self-checkout: the interface a shopper sees, the cart that audits a basket, and the images captured when an item is identified.",
+      title: "Go-to-market",
+      body: "Roadmaps, co-build partnerships, and the launch plan that follows a working system. The work is aligning what gets built with how it is sold.",
     },
     {
-      label: "In your words",
-      body: "A longer introduction belongs here. A few sentences on the work, and what you want a reader to know next.",
+      title: "Retail checkout",
+      body: "Computer-vision checkout for stores. At NCR that was Halo: a lane that recognizes a basket, shaped by how retailers actually run the front of the store.",
+    },
+    {
+      title: "Portfolio",
+      body: "Which ideas get funded. Budgets, business cases, and the choice to build, buy, or partner, so experimentation turns into a pilot or a product.",
     },
   ],
 };

@@ -17,14 +17,32 @@ export default function Home() {
           <h1 className="mt-4 max-w-4xl font-serif text-5xl leading-[0.95] tracking-tight text-balance sm:text-7xl">
             {profile.name}
           </h1>
-          <p className="mt-6 max-w-2xl font-sans text-xl leading-8">{profile.line}</p>
-          <ul className="mt-10 grid gap-4 md:grid-cols-3">
-            {profile.notes.map((note) => (
-              <li key={note.label} className="rounded-2xl border border-border bg-card p-5">
-                <p className="font-mono text-[0.62rem] tracking-[0.14em] text-stamp uppercase">
-                  {note.label}
-                </p>
-                <p className="mt-3 font-sans text-sm leading-6 text-muted-foreground">{note.body}</p>
+          <p className="mt-4 font-sans text-lg text-muted-foreground">{profile.role}</p>
+          <div className="mt-10 max-w-3xl">
+            {profile.lines.map((line) => (
+              <p key={line} className="font-serif text-2xl leading-snug tracking-tight sm:text-3xl">
+                {line}
+              </p>
+            ))}
+          </div>
+          <div className="mt-10 grid gap-6 border-t border-border pt-8 lg:grid-cols-[minmax(0,16rem)_minmax(0,1fr)] lg:gap-12">
+            <div>
+              <p className="font-mono text-[0.62rem] tracking-[0.14em] text-stamp uppercase">Now</p>
+              <p className="mt-2 font-serif text-xl tracking-tight">UL Solutions, Atlanta</p>
+              <a
+                href={`mailto:${profile.email}`}
+                className="mt-3 inline-block font-sans text-sm text-foreground underline decoration-border underline-offset-4 hover:decoration-stamp"
+              >
+                {profile.email}
+              </a>
+            </div>
+            <p className="max-w-2xl font-sans text-base leading-7">{profile.summary}</p>
+          </div>
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {profile.focus.map((item) => (
+              <li key={item.title} className="rounded-2xl border border-border bg-card p-5">
+                <h2 className="font-serif text-xl tracking-tight">{item.title}</h2>
+                <p className="mt-3 font-sans text-sm leading-6 text-muted-foreground">{item.body}</p>
               </li>
             ))}
           </ul>
