@@ -22,7 +22,7 @@ export const profile = {
     },
     {
       title: "Retail checkout",
-      body: "Led NCR’s first autonomous checkout. Chose the path over Just Walk Out and Coke & Go. Phillips 66 pilot. 46% faster transactions.",
+      body: "Led NCR’s first autonomous checkout. Evaluated and chose frictionless technology stack. Phillips 66 pilot. 46% faster transactions.",
     },
     {
       title: "Portfolio",
