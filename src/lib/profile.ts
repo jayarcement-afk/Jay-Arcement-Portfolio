@@ -14,7 +14,7 @@ export const profile = {
   focus: [
     {
       title: "AI product",
-      body: "Led UL’s 1st agentic customer solution. 55 agents evaluated 10 million items; 95% accuracy, 300× efficiency. CEO Mark of excellence. Sold $3M to WMT, BB, Target.",
+      body: "Led UL’s 1st agentic customer solution. 55 agents evaluated 10 million items; 95% accuracy, 300× efficiency. CEO Mark of excellence. Sold $3M to three tier-one retailers.",
     },
     {
       title: "Go-to-market",
