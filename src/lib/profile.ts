@@ -22,7 +22,7 @@ export const profile = {
     },
     {
       title: "Retail checkout",
-      body: "Computer-vision checkout for stores. At NCR that was Halo: a lane that recognizes a basket, shaped by how retailers actually run the front of the store.",
+      body: "Led NCR’s first autonomous checkout. Chose the path over Just Walk Out and Coke & Go. Phillips 66 pilot. 46% faster transactions.",
     },
     {
       title: "Portfolio",
