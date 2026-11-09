@@ -14,7 +14,7 @@ export const profile = {
   focus: [
     {
       title: "AI product",
-      body: "Agentic systems and computer vision, from the first customer signal through a pilot and into something a buyer adopts. At UL Solutions that includes a first agentic product taken up by Walmart, Target, and Best Buy.",
+      body: "Led UL’s 1st agentic customer solution. 55 agents evaluated 10 million items; 95% accuracy, 300× efficiency. CEO Mark of excellence. Sold $3M to WMT, BB, Target.",
     },
     {
       title: "Go-to-market",
