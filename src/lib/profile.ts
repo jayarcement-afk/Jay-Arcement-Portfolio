@@ -3,9 +3,9 @@ export const profile = {
   place: "Atlanta",
   role: "Director of AI Product & GTM Strategy",
   lines: [
-    "Customer signals become products.",
-    "Products become businesses.",
-    "Businesses need a way to reach the market.",
+    "AI Product & Strategy Executive",
+    "From Concept to Commercialization",
+    "15+ Years Leading Technology Transformation",
   ],
   summary:
     "For fifteen years I have taken AI, computer vision, and data from a customer problem to a product a company can sell. At UL Solutions I direct enterprise AI product strategy, a budget above $6 million, and a portfolio of 11 products. At NCR I led retail product innovation and launched Halo Checkout, which cut time at the lane by 46%. The release and the patents below come from that work.",
