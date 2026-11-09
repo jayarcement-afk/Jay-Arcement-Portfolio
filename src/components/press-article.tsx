@@ -1,3 +1,4 @@
+import { KeptRecord } from "@/components/kept-record";
 import { Shell } from "@/components/shell";
 import { SourceLinks } from "@/components/source-links";
 import { press } from "@/lib/press";
@@ -6,6 +7,11 @@ export function PressArticle() {
   return (
     <Shell current={press.href}>
       <article className="mx-auto w-full max-w-3xl px-5 py-8 sm:px-8 sm:py-12 lg:py-14">
+        <KeptRecord
+          sourceLabel="the Nasdaq release"
+          sourceHref={press.sources[0].href}
+          kept="The headline, date, launch facts, companies, contacts, and links from that page are stored here. Nasdaq and Business Wire still hold the published wording."
+        />
         <header>
           <p className="font-mono text-[0.68rem] tracking-[0.16em] text-stamp uppercase">
             {press.kicker}
@@ -63,6 +69,26 @@ export function PressArticle() {
               </section>
             ))}
           </div>
+        </section>
+
+        <section className="mt-12" aria-labelledby="printed-links">
+          <h2 id="printed-links" className="font-serif text-2xl tracking-tight">
+            Links printed on the release
+          </h2>
+          <ul className="mt-4 space-y-2 font-serif text-[1.05rem]">
+            {press.printedLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline decoration-border underline-offset-4 hover:decoration-stamp"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
         </section>
 
         <section className="mt-12" aria-labelledby="contacts">

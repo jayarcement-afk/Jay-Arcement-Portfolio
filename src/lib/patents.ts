@@ -14,6 +14,11 @@ export type PatentDoc = {
   events?: string[];
   text: PatentText;
   sources: SourceLink[];
+  archive: {
+    sourceLabel: string;
+    sourceHref: string;
+    kept: string;
+  };
 };
 
 const themedText = themed as PatentText;
@@ -46,6 +51,11 @@ export const patents: Record<PatentDoc["href"], PatentDoc> = {
       },
     ],
     text: themedText,
+    archive: {
+      sourceLabel: "the USPTO PDF for US 12,725,481 B2",
+      sourceHref: "/patents/US12725481B2.pdf",
+      kept: "That file is stored in this project. The claims and description below are the public patent text, so the grant is still readable if the USPTO link changes.",
+    },
     sources: [
       {
         label: "USPTO PDF",
@@ -89,6 +99,11 @@ export const patents: Record<PatentDoc["href"], PatentDoc> = {
       },
     ],
     text: cartText,
+    archive: {
+      sourceLabel: "the USPTO PDF for US 12,711,285 B2",
+      sourceHref: "/patents/US12711285B2.pdf",
+      kept: "That file is stored in this project. The claims and description below are the public patent text, so the grant is still readable if the USPTO link changes.",
+    },
     sources: [
       { label: "USPTO PDF", href: "/patents/US12711285B2.pdf" },
       {
@@ -132,6 +147,11 @@ export const patents: Record<PatentDoc["href"], PatentDoc> = {
       "December 30, 2025: assignment to NCR Voyix Corporation from Amit Acharya, Marc Haberkorn, Eric Xavier Schoch, Matthew Farrow, and Yogesh Kamat.",
     ],
     text: captureText,
+    archive: {
+      sourceLabel: "the Justia publication",
+      sourceHref: "https://patents.justia.com/patent/20240005750",
+      kept: "The specification and all 20 claims from that listing are stored on this page.",
+    },
     sources: [
       {
         label: "Justia publication",

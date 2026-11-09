@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { KeptRecord } from "@/components/kept-record";
 import { People } from "@/components/people";
 import { Shell } from "@/components/shell";
 import { SourceLinks } from "@/components/source-links";
@@ -8,6 +9,11 @@ export function InventorPage() {
   return (
     <Shell current={inventor.href}>
       <article className="mx-auto w-full max-w-3xl px-5 py-8 sm:px-8 sm:py-12 lg:py-14">
+        <KeptRecord
+          sourceLabel="the Justia inventor listing"
+          sourceHref={inventor.source.href}
+          kept="All six listings are stored here with their titles, numbers, dates, inventors, and abstracts. The two grants and the 2024 application also open in full."
+        />
         <header>
           <p className="font-mono text-[0.68rem] tracking-[0.16em] text-stamp uppercase">
             Inventor

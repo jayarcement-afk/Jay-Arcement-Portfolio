@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s · Folio",
   },
   description:
-    "A shelf of public pages: the Phillips 66 and Mach 1 Halo checkout release, two NCR Voyix patents, Jay Arcement’s inventor listing, and the 2024 item-image application.",
+    "Jay Arcement’s portfolio archive: the Halo checkout release, two USPTO patent files, the inventor listing, and the 2024 item-image application.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

@@ -1,6 +1,6 @@
 # Folio
 
-A shelf of five public pages, built so more routes can be added beside them.
+Jay Arcement’s portfolio archive of five public records, saved November 8, 2026, and built so more routes can be added beside them.
 
 1. The January 10, 2025 Nasdaq release on Phillips 66, Mach 1, NCR Voyix Halo checkout, and Everseen.
 2. US 12,725,481 B2, *Personalized and themed transaction interface*, including the official USPTO PDF.
@@ -8,7 +8,7 @@ A shelf of five public pages, built so more routes can be added beside them.
 4. The public inventor listing for Jay Arcement.
 5. US 2024/0005750 A1, the published application on event-triggered item image capture.
 
-The grant pages show the USPTO PDFs and a reading copy of the patent text. The inventor page and the 2024 application carry the same public record. The press page is a reading of the announcement, with links to the Nasdaq and Business Wire versions.
+The grant pages store the USPTO PDFs and the full patent text. The inventor page stores all six listings. The 2024 application stores the published specification. The press page stores a clipping of the announcement and links to the Nasdaq and Business Wire wording.
 
 ## Run locally
 

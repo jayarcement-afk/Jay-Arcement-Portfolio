@@ -1,4 +1,5 @@
 import { FileText } from "lucide-react";
+import { KeptRecord } from "@/components/kept-record";
 import { People } from "@/components/people";
 import { Shell } from "@/components/shell";
 import { SourceLinks } from "@/components/source-links";
@@ -20,6 +21,11 @@ export function PatentDocument({ doc }: { doc: PatentDoc }) {
   return (
     <Shell current={doc.href}>
       <article className="mx-auto w-full max-w-3xl px-5 py-8 sm:px-8 sm:py-12 lg:py-14">
+        <KeptRecord
+          sourceLabel={doc.archive.sourceLabel}
+          sourceHref={doc.archive.sourceHref}
+          kept={doc.archive.kept}
+        />
         <header>
           <p
             className={

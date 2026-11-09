@@ -52,6 +52,13 @@ export const press = {
       body: "Everseen builds vision AI for retail. The release said 11 of the top 20 global retailers use it, and pointed readers to everseen.com.",
     },
   ],
+  printedLinks: [
+    { label: "NCR Voyix", href: "https://www.ncrvoyix.com/" },
+    { label: "Everseen", href: "https://everseen.com/" },
+    { label: "Phillips 66", href: "https://www.phillips66.com/" },
+    { label: "NCR Voyix on X", href: "https://x.com/NCR_Voyix" },
+    { label: "NCR Voyix on LinkedIn", href: "https://www.linkedin.com/company/ncrvoyix" },
+  ],
   contacts: [
     { role: "NCR Voyix investor contact", value: "Alan Katz, alan.katz@ncrvoyix.com" },
     { role: "NCR Voyix media contact", value: "media.relations@ncrvoyix.com" },

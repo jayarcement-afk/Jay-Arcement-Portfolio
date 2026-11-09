@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { savedOn } from "@/lib/archive";
 import { shelf, type ShelfEntry } from "@/lib/shelf";
 import { cn } from "@/lib/utils";
 
@@ -18,7 +19,7 @@ export function Shell({
               Folio
             </span>
             <span className="mt-2 block font-sans text-[0.68rem] tracking-[0.18em] text-muted-foreground uppercase">
-              Public record shelf
+              Portfolio archive
             </span>
           </Link>
         </div>
@@ -51,7 +52,7 @@ export function Shell({
           })}
         </nav>
         <p className="hidden px-5 pb-6 font-sans text-xs leading-5 text-muted-foreground lg:block">
-          Five routes so far. Add the next page beside them.
+          Kept {savedOn}, so the records stay if those pages move.
         </p>
       </aside>
       <div className="min-w-0">{children}</div>
