@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Shell } from "@/components/shell";
 import { profile } from "@/lib/profile";
@@ -11,32 +12,55 @@ export default function Home() {
     <Shell>
       <main className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-16">
         <section id="about" className="scroll-mt-24">
-          <p className="font-mono text-[0.68rem] tracking-[0.16em] text-stamp uppercase">
-            {profile.place}
-          </p>
-          <h1 className="mt-4 max-w-4xl font-serif text-5xl leading-[0.95] tracking-tight text-balance sm:text-7xl">
-            {profile.name}
-          </h1>
-          <p className="mt-4 font-sans text-lg text-muted-foreground">{profile.role}</p>
-          <div className="mt-10 max-w-3xl">
-            {profile.lines.map((line) => (
-              <p key={line} className="font-serif text-2xl leading-snug tracking-tight sm:text-3xl">
-                {line}
-              </p>
-            ))}
-          </div>
-          <div className="mt-10 grid gap-6 border-t border-border pt-8 lg:grid-cols-[minmax(0,16rem)_minmax(0,1fr)] lg:gap-12">
+          <Image
+            src="/images/atlanta-banner.jpg"
+            alt="Atlanta skyline. Jay Arcement, AI product and strategy executive. Transforming technology into business value."
+            width={1584}
+            height={396}
+            priority
+            className="h-auto w-full rounded-3xl"
+          />
+          <div className="mt-8 grid grid-cols-[7.5rem_minmax(0,1fr)] items-end gap-x-4 sm:grid-cols-[12rem_minmax(0,1fr)] lg:mt-10 lg:grid-cols-[17rem_minmax(0,1fr)] lg:items-start lg:gap-x-12">
+            <Image
+              src="/images/jay-arcement.jpg"
+              alt="Portrait of Jay Arcement"
+              width={1200}
+              height={1500}
+              priority
+              className="aspect-[4/5] w-full rounded-2xl object-cover lg:row-span-2 lg:rounded-3xl"
+            />
             <div>
-              <p className="font-mono text-[0.62rem] tracking-[0.14em] text-stamp uppercase">Now</p>
-              <p className="mt-2 font-serif text-xl tracking-tight">UL Solutions, Atlanta</p>
-              <a
-                href={`mailto:${profile.email}`}
-                className="mt-3 inline-block font-sans text-sm text-foreground underline decoration-border underline-offset-4 hover:decoration-stamp"
-              >
-                {profile.email}
-              </a>
+              <p className="font-mono text-[0.68rem] tracking-[0.16em] text-stamp uppercase">
+                {profile.place}
+              </p>
+              <h1 className="mt-2 max-w-4xl font-serif text-4xl leading-[0.95] tracking-tight text-balance sm:text-5xl lg:mt-3 lg:text-6xl">
+                {profile.name}
+              </h1>
+              <p className="mt-4 hidden font-sans text-lg text-muted-foreground lg:block">{profile.role}</p>
             </div>
-            <p className="max-w-2xl font-sans text-base leading-7">{profile.summary}</p>
+            <div className="col-span-2 mt-8 lg:col-span-1">
+              <p className="mb-6 font-sans text-base text-muted-foreground lg:hidden">{profile.role}</p>
+              <div className="max-w-3xl">
+                {profile.lines.map((line) => (
+                  <p key={line} className="font-serif text-2xl leading-snug tracking-tight sm:text-3xl">
+                    {line}
+                  </p>
+                ))}
+              </div>
+              <div className="mt-8 grid gap-6 border-t border-border pt-8 lg:grid-cols-[minmax(0,14rem)_minmax(0,1fr)] lg:gap-10">
+                <div>
+                  <p className="font-mono text-[0.62rem] tracking-[0.14em] text-stamp uppercase">Now</p>
+                  <p className="mt-2 font-serif text-xl tracking-tight">UL Solutions, Atlanta</p>
+                  <a
+                    href={`mailto:${profile.email}`}
+                    className="mt-3 inline-block font-sans text-sm text-foreground underline decoration-border underline-offset-4 hover:decoration-stamp"
+                  >
+                    {profile.email}
+                  </a>
+                </div>
+                <p className="max-w-2xl font-sans text-base leading-7">{profile.summary}</p>
+              </div>
+            </div>
           </div>
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {profile.focus.map((item) => (
