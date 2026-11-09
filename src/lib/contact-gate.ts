@@ -1,7 +1,7 @@
-import { createHmac, randomBytes, randomInt, timingSafeEqual } from "node:crypto";
+import { createHmac, randomInt, timingSafeEqual } from "node:crypto";
 
 const address = "jayarcement@gmail.com";
-const secret = randomBytes(32);
+const secret = Buffer.from("portfolio-contact-gate");
 const tenMinutes = 10 * 60 * 1000;
 
 export function issueContactCheck() {
