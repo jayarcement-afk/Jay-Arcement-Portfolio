@@ -5,8 +5,8 @@ import { cn } from "@/lib/utils";
 
 const nav = [
   { href: "/#about", label: "About", id: "about" },
-  { href: "/#releases", label: "Releases", id: "releases" },
-  { href: "/#patents", label: "Patents", id: "patents" },
+  { href: "/#releases", label: "Product Releases", id: "releases" },
+  { href: "/#patents", label: "Patents & Projects", id: "patents" },
 ] as const;
 
 function activeSection(current?: string) {

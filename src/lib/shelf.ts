@@ -66,6 +66,6 @@ export const workSections = [
   },
   {
     id: "patents" as const,
-    title: "Patents and Projects",
+    title: "Patents & Projects",
   },
 ];
