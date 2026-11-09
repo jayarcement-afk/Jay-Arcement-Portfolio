@@ -26,7 +26,7 @@ export const profile = {
     },
     {
       title: "Portfolio",
-      body: "Which ideas get funded. Budgets, business cases, and the choice to build, buy, or partner, so experimentation turns into a pilot or a product.",
+      body: "Built the innovation portfolio. Horizon 1–3, one score for every bet. 100+ ideas, 25 governed, 11 commercialized. $3M new revenue, 9,000 hours saved.",
     },
   ],
 };
