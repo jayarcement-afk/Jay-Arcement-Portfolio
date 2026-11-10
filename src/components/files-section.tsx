@@ -32,8 +32,10 @@ export function FilesSection() {
       error?: string;
     } | null;
     if (!response.ok || !body?.files) {
-      setStatus("error");
-      setMessage(body?.error || "Files could not be loaded.");
+      setFiles([]);
+      setCanManage(false);
+      setStatus("ready");
+      setMessage(response.status === 401 ? "" : body?.error || "Added files could not be loaded.");
       return;
     }
     setFiles(body.files.map(asUpload));
@@ -53,8 +55,10 @@ export function FilesSection() {
         } | null;
         if (ignore) return;
         if (!response.ok || !body?.files) {
-          setStatus("error");
-          setMessage(body?.error || "Files could not be loaded.");
+          setFiles([]);
+          setCanManage(false);
+          setStatus("ready");
+          if (response.status !== 401) setMessage(body?.error || "Added files could not be loaded.");
           return;
         }
         setFiles(body.files.map(asUpload));

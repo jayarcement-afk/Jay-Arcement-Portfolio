@@ -5,9 +5,15 @@ const privateHeaders = { "cache-control": "private, no-store" };
 export async function viewer(request: Request): Promise<VerifiedIdentity | Response> {
   const identity = await getIdentity(request);
   if (!identity.verified) {
-    return Response.json({ error: "Sign in to use files." }, { status: 401, headers: privateHeaders });
+    return Response.json({ error: "Sign in to add or remove a file." }, { status: 401, headers: privateHeaders });
   }
   return identity;
+}
+
+export async function fileAccess(request: Request): Promise<{ stage: IdentityStage; canManage: boolean }> {
+  const identity = await getIdentity(request);
+  if (!identity.verified) return { stage: "production", canManage: false };
+  return { stage: identity.stage, canManage: isPerson(identity) };
 }
 
 export function isPerson(identity: VerifiedIdentity) {

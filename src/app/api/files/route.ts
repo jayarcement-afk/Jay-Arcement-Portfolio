@@ -6,17 +6,16 @@ import {
   insertFile,
   listFiles,
 } from "@/lib/files";
-import { isPerson, jsonError, privateHeaders, rejectsCrossSiteWrite, stageOf, viewer } from "@/lib/site-viewer";
+import { fileAccess, isPerson, jsonError, privateHeaders, rejectsCrossSiteWrite, stageOf, viewer } from "@/lib/site-viewer";
 
 const fileIdPattern = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
 export async function GET(request: Request) {
-  const identity = await viewer(request);
-  if (identity instanceof Response) return identity;
+  const access = await fileAccess(request);
   try {
-    const files = await listFiles(stageOf(identity));
+    const files = await listFiles(access.stage);
     return Response.json(
-      { files, canManage: isPerson(identity) },
+      { files, canManage: access.canManage },
       { headers: privateHeaders },
     );
   } catch {
