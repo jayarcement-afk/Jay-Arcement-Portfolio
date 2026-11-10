@@ -10,6 +10,7 @@ const nav = [
   { href: "/#about", label: "About", id: "about" },
   { href: "/#releases", label: "Product Releases", id: "releases" },
   { href: "/#patents", label: "Patents & Projects", id: "patents" },
+  { href: "/#files", label: "Files", id: "files" },
 ] as const;
 
 const sectionIds = nav.map((item) => item.id);
@@ -32,11 +33,16 @@ export function SectionNav({ current }: { current?: string }) {
 
     const update = () => {
       const line = 120;
-      let next: (typeof sectionIds)[number] = "about";
-      for (const id of sectionIds) {
-        const section = document.getElementById(id);
-        if (!section) continue;
-        if (section.getBoundingClientRect().top <= line) next = id;
+      const atEnd =
+        window.scrollY > 0 &&
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+      let next: (typeof sectionIds)[number] = atEnd ? sectionIds[sectionIds.length - 1] : "about";
+      if (!atEnd) {
+        for (const id of sectionIds) {
+          const section = document.getElementById(id);
+          if (!section) continue;
+          if (section.getBoundingClientRect().top <= line) next = id;
+        }
       }
       setVisible(next);
     };

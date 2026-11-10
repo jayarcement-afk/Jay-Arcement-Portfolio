@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FilesSection } from "@/components/files-section";
 import { Shell } from "@/components/shell";
 import { profile } from "@/lib/profile";
 import { shelf, workSections } from "@/lib/shelf";
@@ -125,6 +126,11 @@ export default function Home() {
               </li>
             ))}
           </ol>
+        </section>
+
+        <section id="files" className="mt-20 scroll-mt-24">
+          <SectionHeading index="03" title="Files" />
+          <FilesSection />
         </section>
       </main>
     </Shell>
