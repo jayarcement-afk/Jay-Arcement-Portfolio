@@ -42,6 +42,40 @@ export default function HazardClassificationPage() {
             </div>
           </div>
         </aside>
+        <aside className="mt-8 grid items-center gap-6 rounded-3xl border border-border bg-card p-4 sm:p-6 lg:grid-cols-[18rem_minmax(0,1fr)] lg:gap-8">
+          <Image
+            src={hazard.hbr.image}
+            alt="Harvard Business Review sponsored article, In Regulated Industries, AI Without Certainty Is Just Risk, from UL Solutions."
+            width={1920}
+            height={1100}
+            className="h-auto w-full rounded-2xl"
+          />
+          <div>
+            <p className="font-mono text-[0.68rem] tracking-[0.16em] text-stamp uppercase">
+              {hazard.hbr.label}
+            </p>
+            <div className="mt-4 grid gap-4">
+              {hazard.hbr.paragraphs.map((paragraph) => (
+                <p key={paragraph.slice(0, 32)} className="font-sans text-base leading-7">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            <ul className="mt-5 space-y-2 font-sans text-sm">
+              {hazard.hbr.links.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    {...(link.external ? { target: "_blank", rel: "noreferrer" } : {})}
+                    className="underline decoration-border underline-offset-4 hover:decoration-stamp"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </aside>
         <div className="mt-10 grid items-start gap-8 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-12">
           <ul className="grid grid-cols-2 gap-3 lg:grid-cols-1">
             {hazard.metrics.map((metric) => (

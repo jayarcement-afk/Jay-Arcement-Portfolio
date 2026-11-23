@@ -11,6 +11,26 @@ export const hazard = {
       "Received 2025 CEO Mark of Excellence Award by UL Solutions. This achievement reflects the dedication, innovation, and collaboration of an exceptional group of colleagues. Proud to be part of a team making a meaningful impact in creating a safer world.",
     ],
   },
+  hbr: {
+    image: "/images/hbr-regulated-industries.png",
+    label: "Harvard Business Review",
+    paragraphs: [
+      "Harvard Business Review carried this solution to its executive audience. The sponsored piece, “In Regulated Industries, AI Without Certainty Is Just Risk,” states the standard plainly: in a regulated market, AI that cannot be defended is a risk, not a product.",
+      "Hazard classification is the proof point. Domain-trained models, UL’s own data, and expert review still in the loop. 95% accuracy. 300× the pace of manual classification.",
+    ],
+    links: [
+      {
+        label: "Read it on Harvard Business Review",
+        href: "https://hbr.org/sponsored/2026/11/in-regulated-industries-ai-without-certainty-is-just-risk?linkId=1040593256",
+        external: true,
+      },
+      {
+        label: "Saved copy of the page",
+        href: "/downloads/In%20Regulated%20Industries%2C%20AI%20Without%20Certainty%20Is%20Just%20Risk.png",
+        external: false,
+      },
+    ],
+  },
   metrics: [
     { label: "Accuracy", value: "95%" },
     { label: "Times processed", value: "10 million" },
