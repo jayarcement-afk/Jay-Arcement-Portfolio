@@ -1,7 +1,7 @@
 export const profile = {
   name: "Jay Arcement",
   place: "Atlanta",
-  role: "Director of AI Product & GTM Strategy",
+  role: "AI Product & Strategy Executive",
   lines: [
     "AI Product & Strategy Executive",
     "From Concept to Commercialization",
