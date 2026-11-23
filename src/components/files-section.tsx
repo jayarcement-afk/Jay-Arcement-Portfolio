@@ -72,7 +72,7 @@ export function FilesSection() {
               </div>
               <a
                 href={file.href}
-                download={file.name}
+                download={downloadName(file)}
                 className="inline-flex h-8 shrink-0 items-center rounded-lg bg-primary px-2.5 font-sans text-sm text-primary-foreground hover:bg-primary/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
               >
                 Download
@@ -83,6 +83,13 @@ export function FilesSection() {
       ) : null}
     </div>
   );
+}
+
+function downloadName(file: { name: string; href: string }) {
+  if (/\.[a-z0-9]{2,5}$/i.test(file.name)) return file.name;
+  const base = decodeURIComponent(file.href.split("/").pop() ?? "");
+  const extension = base.includes(".") ? base.slice(base.lastIndexOf(".")) : "";
+  return `${file.name}${extension}`;
 }
 
 function formatSize(bytes: number) {
