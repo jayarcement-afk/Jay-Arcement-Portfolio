@@ -102,32 +102,13 @@ export function PressArticle() {
           ))}
         </div>
 
-        <section className="mt-12" aria-labelledby="what-halo-does">
-          <h2 id="what-halo-does" className="font-serif text-2xl tracking-tight">
-            What the release said Halo does
-          </h2>
-          <ol className="mt-5 grid gap-4 md:grid-cols-2">
-            {press.points.map((point, index) => (
-              <li key={point.title} className="rounded-2xl border border-border bg-card p-5">
-                <span className="font-mono text-xs tracking-[0.14em] text-stamp uppercase">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <h3 className="mt-2 font-serif text-xl">{point.title}</h3>
-                <p className="mt-2 font-sans text-sm leading-6 text-muted-foreground">{point.body}</p>
-              </li>
-            ))}
-          </ol>
-          <p className="mt-4 max-w-3xl rounded-2xl bg-accent px-5 py-4 font-sans text-sm leading-6 text-accent-foreground">
-            {press.timing}
-          </p>
-          <Photo
-            src="/images/halo/hardware.webp"
-            alt="Two NCR Voyix Halo checkout units, one built into a counter and one standing on a pedestal."
-            width={1920}
-            height={1080}
-            caption="NCR Voyix Halo, counter and pedestal."
-          />
-        </section>
+        <Photo
+          src="/images/halo/hardware.webp"
+          alt="Two NCR Voyix Halo checkout units, one built into a counter and one standing on a pedestal."
+          width={1920}
+          height={1080}
+          caption="NCR Voyix Halo, counter and pedestal."
+        />
 
         <section className="mt-12" aria-labelledby="companies">
           <h2 id="companies" className="font-serif text-2xl tracking-tight">
