@@ -19,15 +19,8 @@ export default function UrbanForagerPage() {
           {urbanForager.title}
         </h1>
         <p className="mt-4 max-w-2xl font-sans text-lg leading-8 text-muted-foreground">
-          Know the tree. Return when it is ripe.
+          {urbanForager.dek}
         </p>
-        <div className="mt-8 grid max-w-3xl gap-5">
-          {urbanForager.paragraphs.map((paragraph) => (
-            <p key={paragraph.slice(0, 32)} className="font-sans text-base leading-7">
-              {paragraph}
-            </p>
-          ))}
-        </div>
         <div className="mt-8">
           <Button
             nativeButton={false}
