@@ -1,7 +1,33 @@
+import Image from "next/image";
 import { KeptRecord } from "@/components/kept-record";
 import { Shell } from "@/components/shell";
 import { SourceLinks } from "@/components/source-links";
 import { press } from "@/lib/press";
+
+function Photo({
+  src,
+  alt,
+  width,
+  height,
+  caption,
+  className = "mt-10",
+}: {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  caption: string;
+  className?: string;
+}) {
+  return (
+    <figure className={className}>
+      <Image src={src} alt={alt} width={width} height={height} className="h-auto w-full rounded-3xl" />
+      <figcaption className="mt-3 font-mono text-[0.68rem] tracking-wide text-muted-foreground">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
 
 export function PressArticle() {
   return (
@@ -42,12 +68,34 @@ export function PressArticle() {
           </div>
         </header>
 
+        <Photo
+          src="/images/halo/show-floor.jpg"
+          alt="Four people standing with an NCR Voyix self-checkout at a trade-show booth labeled Self Checkout."
+          width={1280}
+          height={964}
+          caption="Self-checkout on the show floor."
+          className="mt-8"
+        />
+
         <p className="mt-10 max-w-3xl font-sans text-lg leading-8 font-semibold text-foreground">
           {press.summary}
         </p>
 
         <div className="mt-10 grid max-w-3xl gap-8">
-          {press.paragraphs.map((paragraph) => (
+          {press.paragraphs.slice(0, 2).map((paragraph) => (
+            <p key={paragraph.slice(0, 48)} className="font-sans text-base leading-7">
+              {paragraph}
+            </p>
+          ))}
+          <Photo
+            src="/images/halo/shopper.webp"
+            alt="A shopper reaching toward the screen of a self-checkout with a camera bar above the scanner."
+            width={1600}
+            height={1600}
+            caption="A shopper at a camera-assisted lane."
+            className="mt-2"
+          />
+          {press.paragraphs.slice(2).map((paragraph) => (
             <p key={paragraph.slice(0, 48)} className="font-sans text-base leading-7">
               {paragraph}
             </p>
@@ -72,6 +120,13 @@ export function PressArticle() {
           <p className="mt-4 max-w-3xl rounded-2xl bg-accent px-5 py-4 font-sans text-sm leading-6 text-accent-foreground">
             {press.timing}
           </p>
+          <Photo
+            src="/images/halo/hardware.webp"
+            alt="Two NCR Voyix Halo checkout units, one built into a counter and one standing on a pedestal."
+            width={1920}
+            height={1080}
+            caption="NCR Voyix Halo, counter and pedestal."
+          />
         </section>
 
         <section className="mt-12" aria-labelledby="companies">
