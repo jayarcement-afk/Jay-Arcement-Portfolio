@@ -92,6 +92,21 @@ export default function HazardClassificationPage() {
               </p>
               <p className="mt-1 font-serif text-2xl tracking-tight">{hazard.retailers.value}</p>
             </li>
+            <li className="rounded-2xl border border-border bg-card px-4 py-3">
+              <p className="font-mono text-[0.62rem] tracking-[0.14em] text-stamp uppercase">
+                Covered by
+              </p>
+              <p className="mt-1 font-serif text-xl leading-tight tracking-tight">
+                <a
+                  href={hazard.hbr.links[0].href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline decoration-border underline-offset-4 hover:decoration-stamp"
+                >
+                  Harvard Business Review
+                </a>
+              </p>
+            </li>
           </ul>
           <div className="grid max-w-3xl gap-8">
             {hazard.paragraphs.map((paragraph) => (
