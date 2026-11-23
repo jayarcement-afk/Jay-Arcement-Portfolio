@@ -15,7 +15,7 @@ export const hazard = {
     image: "/images/hbr-regulated-industries.png",
     label: "Harvard Business Review",
     paragraphs: [
-      "Harvard Business Review carried this solution to its executive audience. “In Regulated Industries, AI Without Certainty Is Just Risk” states the standard plainly: in a regulated market, AI that cannot be defended is a risk, not a product.",
+      "Covered by Harvard Business Review, this solution applies AI to hazard classification, enabling faster, more accurate compliance decisions across complex product portfolios.",
       "Hazard classification is the proof point. Domain-trained models, UL’s own data, and expert review still in the loop. 95% accuracy. 300× the pace of manual classification.",
     ],
     links: [
