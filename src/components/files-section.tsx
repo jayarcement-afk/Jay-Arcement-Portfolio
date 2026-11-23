@@ -44,7 +44,7 @@ export function FilesSection() {
     };
   }, []);
 
-  const listed = [...shelfDocuments, ...files];
+  const listed: ShelfFile[] = [...shelfDocuments, ...files];
 
   return (
     <div className="mt-6">
