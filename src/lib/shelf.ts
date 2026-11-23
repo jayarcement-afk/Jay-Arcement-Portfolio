@@ -1,5 +1,5 @@
 import { hazard } from "@/lib/hazard";
-import { trayTables } from "@/lib/projects";
+import { trayTables, urbanForager } from "@/lib/projects";
 
 export type ShelfEntry = {
   href:
@@ -8,7 +8,8 @@ export type ShelfEntry = {
     | "/patents/us-12725481"
     | "/patents/us-12711285"
     | "/patents/us-20240005750"
-    | "/projects/tray-tables";
+    | "/projects/tray-tables"
+    | "/projects/urban-forager";
   group: "releases" | "patents";
   kicker: string;
   title: string;
@@ -66,6 +67,14 @@ export const shelf: ShelfEntry[] = [
       "Event-triggered capture of item image data and generation and storage of enhanced item identification data",
     dek: "A scan or another item-identifying event at self-checkout triggers a photo. The image is stored with the item’s identity so the vision model can be retrained.",
     meta: "Published January 4, 2024 · NCR Voyix",
+  },
+  {
+    href: urbanForager.href,
+    group: "patents",
+    kicker: urbanForager.kicker,
+    title: urbanForager.title,
+    dek: urbanForager.dek,
+    meta: urbanForager.meta,
   },
 ];
 
